@@ -1,5 +1,4 @@
 import React from "react";
-import Header from '../../components/Header'
 import Carouse from './subpage/Carouse'
 import {Link} from 'react-router'
 import C from './subpage/C'
@@ -47,7 +46,6 @@ class Hello extends React.Component{
     render(){
         return (
             <div>
-                <Header titleName="Hello"></Header>
                 <Carouse></Carouse>
                 <p>{this.state.now}</p>
                 <a onClick={this.handleClick.bind(this)}>点我q</a>

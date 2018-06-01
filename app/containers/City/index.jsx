@@ -1,12 +1,12 @@
 import React from 'react'
 
-class Detail extends React.Component{
+class City extends React.Component{
     render(){
         return (
             <div>
-                Detail
+                City
             </div>
         )
     }
 }
-export default Detail
+export default City

@@ -1,12 +1,12 @@
 import React from 'react'
-class Setting extends React.Component{
+
+class Search extends React.Component{
     render(){
         return (
             <div>
-                <div>{this.props.children}</div>
+                Search
             </div>
         )
     }
 }
-
-export default Setting
+export default Search

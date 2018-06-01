@@ -1,15 +1,9 @@
-import React from'react'
-
-import './Header.less'
+import React from 'react'
 
 class Header extends React.Component{
     render(){
         return(
-            <div className="header">
-                {this.props.titleName}
-            </div>
+            <div></div>
         )
     }
 }
-
-export default Header

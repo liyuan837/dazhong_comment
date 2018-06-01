@@ -1,12 +1,12 @@
 import React from 'react'
-
-class Detail extends React.Component{
+class Home extends React.Component{
     render(){
         return (
             <div>
-                Detail
+                Home
             </div>
         )
     }
+
 }
-export default Detail
+export default Home
