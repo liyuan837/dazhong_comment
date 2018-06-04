@@ -1,10 +1,12 @@
 import React from 'react'
-
+import './error.css'
 class NotFound extends React.Component{
     render(){
         return (
             <div>
-                404
+                <div className="bg-box">
+                    <p>您要找的页面丢失了！</p>
+                </div>
             </div>
         )
     }

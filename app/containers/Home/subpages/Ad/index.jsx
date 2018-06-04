@@ -2,26 +2,30 @@ import React from 'react'
 import PureRenderMixin from "react-addons-pure-render-mixin";
 import { connect } from 'react-redux'
 
-import HomeHeader from '../../components/HomeHeader'
-import Category from '../../components/Category'
-import Ad from './subpages/Ad'
+import {get} from '../../../../fetch/get'
 
-class Home extends React.Component{
+class Ad extends React.Component{
     constructor(props,context){
         super(props,context)
-        //react性能优化
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate()
         this.state = {
             initDone:false
         }
     }
 
+    componentDidMount(){
+        const result = get('/api/homead',)
+        result.then((res) => {
+            return res.json()
+        }).then((json) => {
+            console.log(json)
+        })
+    }
+
     render(){
         return (
             <div>
-                <HomeHeader cityName={this.props.userinfo.cityName}></HomeHeader>
-                <Category></Category>
-                <Ad></Ad>
+               ad
             </div>
         )
     }
@@ -42,4 +46,4 @@ function mapDispatchToProps(dispatch){
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Home)
+)(Ad)

@@ -4,7 +4,7 @@ class Detail extends React.Component{
     render(){
         return (
             <div>
-                Detail
+                Detail{this.props.params.id}
             </div>
         )
     }

@@ -1,0 +1,12 @@
+
+.bg-box{
+    width: 90%;
+    height: 400px;
+    margin: 0px auto;
+    background-image: url(http://pic.qianmi.com/shop-admin/img/error_bg.jpg);
+    text-align: center;
+}
+
+.bg-box p{
+    padding-top: 200px;
+}

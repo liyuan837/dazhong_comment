@@ -1,1 +1,3 @@
 Redux reducers
+
+index.js：对reducers下的所有redux计算规则进行汇总

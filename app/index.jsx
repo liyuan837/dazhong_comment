@@ -6,6 +6,7 @@ import RouteMap from './router/routeMap'
 
 //公共样式
 import './static/css/common.less'
+import './static/css/font.css'
 
 import {Provider} from 'react-redux'
 import configureStore from './store/configureStore'
