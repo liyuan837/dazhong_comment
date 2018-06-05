@@ -18,7 +18,7 @@ class App extends React.Component{
         //从localStorage中获取城市
         let cityName = LocalStore.getItem(CITYNAME);
         if(cityName == null){
-            cityName = '南京';
+            cityName = '深圳';
         }
         //将城市信息存储到 Redux 中
         this.props.userinfoActions.update({

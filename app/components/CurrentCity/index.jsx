@@ -14,7 +14,7 @@ class CurrentCity extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="current-city">
                <span>{this.props.cityName}</span>
             </div>
         )
