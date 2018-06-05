@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import HomeHeader from '../../components/HomeHeader'
 import Category from '../../components/Category'
 import Ad from './subpages/Ad'
+import List from './subpages/List'
 
 class Home extends React.Component{
     constructor(props,context){
@@ -22,6 +23,7 @@ class Home extends React.Component{
                 <HomeHeader cityName={this.props.userinfo.cityName}></HomeHeader>
                 <Category></Category>
                 <Ad></Ad>
+                <List></List>
             </div>
         )
     }

@@ -1,6 +1,8 @@
 import React from 'react'
 import './style.less'
 import PureRenderMixin from "react-addons-pure-render-mixin";
+import { Link, hashHistory } from 'react-router'
+
 
 /**
  * 首页搜索头部组件
@@ -15,8 +17,10 @@ class HomeHeader extends React.Component{
         return(
             <div className="home-header clear-fix">
                 <div className="home-header-left float-left">
-                    {this.props.cityName}
-                    <i className='icon-angle-down'></i>
+                    <Link to='/city'>
+                        {this.props.cityName}
+                        <i className='icon-angle-down'></i>
+                    </Link>
                 </div>
                 <div className="home-header-right float-right">
                     <i className="icon-user"></i>

@@ -12,16 +12,16 @@ module.exports = {
     app: path.resolve(__dirname, 'app/index.jsx'),
     // 将 第三方依赖 单独打包成一个vendor.js文件
       vendor:Object.keys(pkg.dependencies)
-    // vendor: [
-    //   'react',
-    //   'react-dom',
-    //   'react-redux',
-    //   'react-router',
-    //   'redux',
-    //   'es6-promise',
-    //   'whatwg-fetch',
-    //   'immutable'
-    // ]
+    //   vendor: [
+    //       'react',
+    //       'react-dom',
+    //       'react-redux',
+    //       'react-router',
+    //       'redux',
+    //       'es6-promise',
+    //       'whatwg-fetch',
+    //       'immutable'
+    //   ]
   },
   output: {
     //生产环境：发布到
@@ -43,8 +43,8 @@ module.exports = {
         { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel' },
         { test: /\.less$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract('style', 'css!postcss!less') },
         { test: /\.css$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract('style', 'css!postcss') },
-        { test:/\.(png|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=5000&name=img/[name].[chunkhash:8].[ext]' },
-        { test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, loader:'url-loader?limit=5000&name=fonts/[name].[chunkhash:8].[ext]'}
+        { test:/\.(png|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=5000&name=img/[name].[ext]' },
+        { test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, loader:'url-loader?limit=5000&name=fonts/[name].[ext]'}
     ]
   },
   postcss: [

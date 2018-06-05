@@ -29,7 +29,7 @@ class Category extends React.Component{
             }
         }
         return(
-            <div>
+            <div className="carousel-box">
                 <ReactSwipe className="carousel" swipeOptions={opt}>
                     <div className="carousel-item">
                         <ul>
