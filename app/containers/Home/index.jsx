@@ -23,7 +23,7 @@ class Home extends React.Component{
                 <HomeHeader cityName={this.props.userinfo.cityName}></HomeHeader>
                 <Category></Category>
                 <Ad></Ad>
-                <List></List>
+                <List cityName={this.props.userinfo.cityName}></List>
             </div>
         )
     }

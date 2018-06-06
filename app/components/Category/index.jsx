@@ -2,6 +2,7 @@ import React from 'react'
 import './style.less'
 import PureRenderMixin from "react-addons-pure-render-mixin";
 import ReactSwipe from 'react-swipe';
+import { Link, hashHistory } from 'react-router'
 
 /**
  * 三方轮播组件
@@ -19,6 +20,10 @@ class Category extends React.Component{
         }
     }
 
+    clickHandle(category){
+        hashHistory.push('/search/'+category)
+    }
+
     render(){
         var opt = {
             auto:2000,
@@ -30,47 +35,47 @@ class Category extends React.Component{
         }
         return(
             <div className="carousel-box">
-                <ReactSwipe className="carousel" swipeOptions={opt}>
+                <ReactSwipe className="carousel" swipeOptions={opt} ref='carousel'>
                     <div className="carousel-item">
                         <ul>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
                         </ul>
                     </div>
                     <div className="carousel-item">
                         <ul>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
                         </ul>
                     </div>
                     <div className="carousel-item">
                         <ul>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
-                            <li><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
+                            <li onClick={this.clickHandle.bind(this,'千古')}><img src="http://www.dyjkglass.com/qiangu.png" alt=""/><div>千古</div></li>
                         </ul>
                     </div>
                 </ReactSwipe>

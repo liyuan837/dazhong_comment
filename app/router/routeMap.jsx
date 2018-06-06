@@ -9,6 +9,8 @@ import Search from '../containers/Search'
 import Detail from '../containers/Detail'
 import NotFound from '../containers/NotFound'
 
+import Login from '../containers/Login'
+
 class RouteMap extends React.Component{
     updateHandle(){
         console.log("路由改变")
@@ -23,6 +25,7 @@ class RouteMap extends React.Component{
                     <Route path="/user" component={User}></Route>
                     <Route path="/search/:type(/:keyword)" component={Search}></Route>
                     <Route path="/detail/:id" component={Detail}></Route>
+                    <Route path="/login(/:router)" component={Login}></Route>
 
                     <Route path="*" component={NotFound}></Route>
                 </Route>

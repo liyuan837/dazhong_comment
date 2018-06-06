@@ -6,7 +6,7 @@ import './style.less'
 import Item from './Item'
 
 /**
- * 列表显示组件
+ * 评价列表显示组件
  */
 class List extends React.Component{
     constructor(props,context){
@@ -17,7 +17,7 @@ class List extends React.Component{
     render(){
         const data = this.props.data;
         return(
-            <div className="shop-box" style={{'background':'#ffffff'}}>
+            <div className="comment-box" style={{'background':'#ffffff'}}>
                 <ul>
                     {data.map( (item,index)=> {
                         return(

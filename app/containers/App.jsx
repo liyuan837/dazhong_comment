@@ -12,6 +12,9 @@ class App extends React.Component{
         super(props,context)
         //react性能优化
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate()
+        this.state = {
+            initDone:false
+        }
     }
 
     componentDidMount(){
@@ -25,12 +28,20 @@ class App extends React.Component{
             cityName:cityName
         })
 
+        this.setState({
+            initDone:true
+        })
+
     }
 
     render(){
         return (
             <div>
-                <div>{this.props.children}</div>
+                {
+                    this.state.initDone
+                    ?<div>{this.props.children}</div>
+                        :<div className="loading">加载中...</div>
+                }
             </div>
         )
     }
@@ -38,7 +49,6 @@ class App extends React.Component{
 
 function mapStateToProps(state){
     return {
-
     }
 }
 

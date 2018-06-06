@@ -1,15 +1,17 @@
 import React from 'react'
 import PureRenderMixin from "react-addons-pure-render-mixin";
-
-import {get} from '../../../../fetch/get'
+import {get} from "@/fetch/get";
+import {connect} from "react-redux";
 
 import ListComponent from '../../../../components/List'
 import LoadMore from '../../../../components/LoadMore'
 
 class List extends React.Component{
+
     constructor(props,context){
         super(props,context)
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate()
+
         this.state = {
             hasMore:false,//是否还有数据可供加载
             data:[],//存储列表数据
@@ -28,13 +30,14 @@ class List extends React.Component{
 
     componentDidMount(){
         //获取首页数据
-       this.loadFirstPageData()
+        this.loadFirstPageData()
     }
 
     //获取首屏数据
     loadFirstPageData(){
-        const cityName = this.props.cityName;
-        const result = get("/api/homelist/"+cityName+"/0")
+        const cityName = this.props.userinfo.cityName;
+        const result = get("/api/search/0" + "/" + cityName + "/" + this.props.type + "/" +this.props.keyword)
+
         setTimeout( ()=>{
             this.resultHandle(result)
         },3000)
@@ -46,9 +49,11 @@ class List extends React.Component{
         this.setState({
             isLoadingMore:true
         })
-        const cityName = this.props.cityName;
+        const cityName = this.props.userinfo.cityName;
         const page =this.state.page
-        const result = get("/api/homelist/"+cityName+"/" + page)
+
+        ///api/search/:page/:city/:category/:keyword
+        const result = get("/api/search/" + page + "/" + cityName + "/" + this.props.type + "/" +this.props.keyword)
 
         setTimeout( ()=>{
             this.resultHandle(result)
@@ -81,15 +86,15 @@ class List extends React.Component{
         }).catch(ex => {
             // 发生错误
             if (__DEV__) {
-                console.error('猜你喜欢模块获取数据报错, ', ex.message)
+                console.error('搜索模块获取数据报错, ', ex.message)
             }
         })
     }
 
+
     render(){
         return (
-            <div style={{'background':'#fff','marginTop':'10px'}}>
-                <h2 className="home-title">猜你喜欢</h2>
+            <div>
                 {
                     this.state.data.length
                         ? <ListComponent data={this.state.data}></ListComponent>
@@ -101,11 +106,23 @@ class List extends React.Component{
                         ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreData.bind(this)}></LoadMore>
                         : ''
                 }
-
             </div>
         )
     }
-
 }
 
-export default List
+function mapStateToProps(state){
+    return {
+        userinfo:state.userinfo
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+
+    }
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(List)
