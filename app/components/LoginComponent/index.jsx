@@ -16,7 +16,7 @@ class LoginComponent extends React.Component{
         }
     }
 
-    changeHandle(e){
+    changeHandle(e) {
         if(e.target.name=='username'){
             this.setState({
                 username:e.target.value
@@ -28,6 +28,8 @@ class LoginComponent extends React.Component{
                 })
             }
     }
+
+
 
     render(){
         return(

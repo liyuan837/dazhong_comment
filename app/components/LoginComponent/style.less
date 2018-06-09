@@ -1,29 +1,64 @@
-.city-list{
-  width: 100%;
-  background: #fff;
-  p{
+.login-box{
+  width: auto;
+  margin: 100px 40px 100px 40px;
+
+  .login-phone{
+    background:#ffffff;
+    height: 40px;
+    line-height: 40px;
     padding-left: 10px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 30px;
+
+    i{
+      color: red;
+      margin-right: 5px;
+    }
+    input{
+      height: 34px;
+      line-height: 34px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      padding-left: 10px;
+    }
   }
-  ul{
-    width: 100%;
-    text-align: center;
-    padding-bottom: 60px;
-    li{
-      margin: 5px;
-      display: inline-block;
-      width: 30%;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
-      border: solid 1px #cccccc;
+
+  .login-code{
+    background:#ffffff;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    margin-top: 10px;
+    i{
+      color: red;
+      margin-right: 5px;
+    }
+    input{
+      height: 34px;
+      line-height: 34px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      padding-left: 10px;
+      width: 140px;
     }
 
-    li.selected{
-      border: solid 1px red;
-      color:red;
+    span{
+      margin-right: 10px;
+      color: red;
     }
+  }
+  a{
+    display: block;
+    background:red;
+    color: #ffffff;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    margin-top: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
   }
 }
