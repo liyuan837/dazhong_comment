@@ -1,5 +1,7 @@
 # 订单评价的开发
 
+博客：https://m.imooc.com/article/14499
+
 源码 https://github.com/wangfupeng1988/react-simple-o2o-demo/tree/stage8-order-comment
 
 ## 最终效果

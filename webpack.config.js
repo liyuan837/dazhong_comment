@@ -74,7 +74,7 @@ module.exports = {
           }
         },
         //开发环境下启动的临时服务器IP+端口
-        host:'172.19.4.13',
+        host:'127.0.0.1',
         port:8000,
 
         contentBase: "./public", //本地服务器所加载的页面所在的目录
